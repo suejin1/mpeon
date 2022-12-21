@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspaces/mpeon/chj/cmake_test
+CMAKE_SOURCE_DIR = /workspaces/mpeon/chj/cmake_test/lib
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspaces/mpeon/chj/cmake_test/build
+CMAKE_BINARY_DIR = /workspaces/mpeon/chj/cmake_test/lib/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/mpeon/chj/cmake_test/build/CMakeFiles /workspaces/mpeon/chj/cmake_test/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/mpeon/chj/cmake_test/lib/build/CMakeFiles /workspaces/mpeon/chj/cmake_test/lib/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/mpeon/chj/cmake_test/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/mpeon/chj/cmake_test/lib/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named program
-
-# Build rule for target.
-program: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 program
-.PHONY : program
-
-# fast build rule for target.
-program/fast:
-	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/build
-.PHONY : program/fast
-
-#=============================================================================
 # Target rules for targets named shape
 
 # Build rule for target.
@@ -133,35 +120,35 @@ shape: cmake_check_build_system
 
 # fast build rule for target.
 shape/fast:
-	$(MAKE) -f lib/CMakeFiles/shape.dir/build.make lib/CMakeFiles/shape.dir/build
+	$(MAKE) -f CMakeFiles/shape.dir/build.make CMakeFiles/shape.dir/build
 .PHONY : shape/fast
 
-main.o: main.cc.o
+shape.o: shape.cc.o
 
-.PHONY : main.o
+.PHONY : shape.o
 
 # target to build an object file
-main.cc.o:
-	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/main.cc.o
-.PHONY : main.cc.o
+shape.cc.o:
+	$(MAKE) -f CMakeFiles/shape.dir/build.make CMakeFiles/shape.dir/shape.cc.o
+.PHONY : shape.cc.o
 
-main.i: main.cc.i
+shape.i: shape.cc.i
 
-.PHONY : main.i
+.PHONY : shape.i
 
 # target to preprocess a source file
-main.cc.i:
-	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/main.cc.i
-.PHONY : main.cc.i
+shape.cc.i:
+	$(MAKE) -f CMakeFiles/shape.dir/build.make CMakeFiles/shape.dir/shape.cc.i
+.PHONY : shape.cc.i
 
-main.s: main.cc.s
+shape.s: shape.cc.s
 
-.PHONY : main.s
+.PHONY : shape.s
 
 # target to generate assembly for a file
-main.cc.s:
-	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/main.cc.s
-.PHONY : main.cc.s
+shape.cc.s:
+	$(MAKE) -f CMakeFiles/shape.dir/build.make CMakeFiles/shape.dir/shape.cc.s
+.PHONY : shape.cc.s
 
 # Help Target
 help:
@@ -171,11 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... program"
 	@echo "... shape"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... shape.o"
+	@echo "... shape.i"
+	@echo "... shape.s"
 .PHONY : help
 
 

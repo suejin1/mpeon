@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/mpeon/chj/cmake_test/build/CMakeFiles /workspaces/mpeon/chj/cmake_test/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /workspaces/mpeon/chj/cmake_test/build && $(CMAKE_COMMAND) -E cmake_progress_start /workspaces/mpeon/chj/cmake_test/build/CMakeFiles /workspaces/mpeon/chj/cmake_test/build/lib/CMakeFiles/progress.marks
+	cd /workspaces/mpeon/chj/cmake_test/build && $(MAKE) -f CMakeFiles/Makefile2 lib/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/mpeon/chj/cmake_test/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /workspaces/mpeon/chj/cmake_test/build && $(MAKE) -f CMakeFiles/Makefile2 lib/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,71 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /workspaces/mpeon/chj/cmake_test/build && $(MAKE) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /workspaces/mpeon/chj/cmake_test/build && $(MAKE) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /workspaces/mpeon/chj/cmake_test/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named program
+# Convenience name for target.
+lib/CMakeFiles/shape.dir/rule:
+	cd /workspaces/mpeon/chj/cmake_test/build && $(MAKE) -f CMakeFiles/Makefile2 lib/CMakeFiles/shape.dir/rule
+.PHONY : lib/CMakeFiles/shape.dir/rule
 
-# Build rule for target.
-program: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 program
-.PHONY : program
+# Convenience name for target.
+shape: lib/CMakeFiles/shape.dir/rule
 
-# fast build rule for target.
-program/fast:
-	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/build
-.PHONY : program/fast
-
-#=============================================================================
-# Target rules for targets named shape
-
-# Build rule for target.
-shape: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 shape
 .PHONY : shape
 
 # fast build rule for target.
 shape/fast:
-	$(MAKE) -f lib/CMakeFiles/shape.dir/build.make lib/CMakeFiles/shape.dir/build
+	cd /workspaces/mpeon/chj/cmake_test/build && $(MAKE) -f lib/CMakeFiles/shape.dir/build.make lib/CMakeFiles/shape.dir/build
 .PHONY : shape/fast
 
-main.o: main.cc.o
+shape.o: shape.cc.o
 
-.PHONY : main.o
+.PHONY : shape.o
 
 # target to build an object file
-main.cc.o:
-	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/main.cc.o
-.PHONY : main.cc.o
+shape.cc.o:
+	cd /workspaces/mpeon/chj/cmake_test/build && $(MAKE) -f lib/CMakeFiles/shape.dir/build.make lib/CMakeFiles/shape.dir/shape.cc.o
+.PHONY : shape.cc.o
 
-main.i: main.cc.i
+shape.i: shape.cc.i
 
-.PHONY : main.i
+.PHONY : shape.i
 
 # target to preprocess a source file
-main.cc.i:
-	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/main.cc.i
-.PHONY : main.cc.i
+shape.cc.i:
+	cd /workspaces/mpeon/chj/cmake_test/build && $(MAKE) -f lib/CMakeFiles/shape.dir/build.make lib/CMakeFiles/shape.dir/shape.cc.i
+.PHONY : shape.cc.i
 
-main.s: main.cc.s
+shape.s: shape.cc.s
 
-.PHONY : main.s
+.PHONY : shape.s
 
 # target to generate assembly for a file
-main.cc.s:
-	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/main.cc.s
-.PHONY : main.cc.s
+shape.cc.s:
+	cd /workspaces/mpeon/chj/cmake_test/build && $(MAKE) -f lib/CMakeFiles/shape.dir/build.make lib/CMakeFiles/shape.dir/shape.cc.s
+.PHONY : shape.cc.s
 
 # Help Target
 help:
@@ -171,11 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... program"
 	@echo "... shape"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... shape.o"
+	@echo "... shape.i"
+	@echo "... shape.s"
 .PHONY : help
 
 
@@ -187,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /workspaces/mpeon/chj/cmake_test/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
