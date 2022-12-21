@@ -145,7 +145,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=test
+CMAKE_PROJECT_NAME:STATIC=cmake_test
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -209,14 +209,11 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Dependencies for the target
-shape_LIB_DEPENDS:STATIC=general;pthread;
+//Value Computed by CMake
+cmake_test_BINARY_DIR:STATIC=/workspaces/mpeon/chj/build
 
 //Value Computed by CMake
-test_BINARY_DIR:STATIC=/workspaces/mpeon/chj/build
-
-//Value Computed by CMake
-test_SOURCE_DIR:STATIC=/workspaces/mpeon/chj/cmake_test
+cmake_test_SOURCE_DIR:STATIC=/workspaces/mpeon/chj
 
 
 ########################
@@ -303,7 +300,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/workspaces/mpeon/chj/cmake_test
+CMAKE_HOME_DIRECTORY:INTERNAL=/workspaces/mpeon/chj
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
