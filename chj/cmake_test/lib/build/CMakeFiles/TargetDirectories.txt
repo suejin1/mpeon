@@ -1,0 +1,2 @@
+/workspaces/mpeon/chj/cmake_test/lib/build/CMakeFiles/rebuild_cache.dir
+/workspaces/mpeon/chj/cmake_test/lib/build/CMakeFiles/edit_cache.dir
