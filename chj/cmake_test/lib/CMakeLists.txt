@@ -1,6 +1,4 @@
 # /lib/CMakeLists.txt
-cmake_minimum_required(VERSION 3.10)
-project(cmake_test)
 
 # 정적 라이브러리 shape 를 만든다.
 add_library(shape STATIC shape.cc)
