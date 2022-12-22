@@ -6,8 +6,8 @@ project(cmake_test)
 
 add_subdirectory(lib)
 
-#main.cc를 이용해서 program을 빌드한다
+#main.cc를 이용해서 filename : program을 빌드한다
 add_executable(program main.cc)
 
-#program바이너리가 요구하는 바이너리 shpae을 추가한다
+#filename : program 바이너리가 요구하는 바이너리 shpae을 추가한다
 target_link_libraries(program shape)
