@@ -1,0 +1,6 @@
+/home/chj/cmake_test/build/CMakeFiles/rebuild_cache.dir
+/home/chj/cmake_test/build/CMakeFiles/program.dir
+/home/chj/cmake_test/build/CMakeFiles/edit_cache.dir
+/home/chj/cmake_test/build/lib/CMakeFiles/rebuild_cache.dir
+/home/chj/cmake_test/build/lib/CMakeFiles/shape.dir
+/home/chj/cmake_test/build/lib/CMakeFiles/edit_cache.dir
