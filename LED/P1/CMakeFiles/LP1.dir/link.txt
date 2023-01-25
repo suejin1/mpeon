@@ -1,1 +1,0 @@
-/usr/bin/cc    CMakeFiles/LP1.dir/led1_p1.c.o CMakeFiles/LP1.dir/led2_p1.c.o CMakeFiles/LP1.dir/led3_p1.c.o CMakeFiles/LP1.dir/led4_p1.c.o CMakeFiles/LP1.dir/led5_p1.c.o  -o LP1 
