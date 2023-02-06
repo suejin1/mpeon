@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/psj/psj_docker/test/clock/4/r/r.cc
+stdio.h
+-
+sys/ipc.h
+-
+sys/msg.h
+-
+string.h
+-
+stdlib.h
+-
+iostream
+-
+memory.h
+-
+time.h
+-
+
