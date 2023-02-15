@@ -1,3 +1,1 @@
-# StuCafeInfoFo
-# literate-engine
 # mpeon
