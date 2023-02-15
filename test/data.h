@@ -24,8 +24,6 @@ typedef enum Time{  S, E } t;
 typedef struct {
   int opcode, LedNum, patter, StartTime, EndTime;
   int run=1;
-  int i=0, q=0;
-  int target = 0;
 
   key_t key;
   int msgid;
@@ -34,4 +32,3 @@ typedef struct {
   time_t timer;
   struct tm* t;
 } c_data;
-//c_data랑 stIpcMsg 전역변수로 만들기

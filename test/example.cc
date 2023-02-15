@@ -16,10 +16,10 @@ void exmaple()
     printf("LED :  1  LedNum  StartTime  EndTime     patter    0  │\n│");
     printf("     ( 1   1~5      free      free        1~3      0) │\n│");
     printf("                                                      │\n│");
-    printf("TEMP : 2    0     StartTime  EndTime    Intervla   0  │\n│");
+    printf("TEMP : 2    0     StartTime  EndTime    Interval   0  │\n│");
     printf("     ( 2    0       free      free        free     0) │\n│");
     printf("                                                      │\n│");
-    printf("GPS :  3    0     StartTime  EndTime    Intervla   0  │\n│");
+    printf("GPS :  3    0     StartTime  EndTime    Interval   0  │\n│");
     printf("     ( 3    0       free      free        free     0) │\n│");
     printf("                                                      │\n│");
 
@@ -27,5 +27,3 @@ void exmaple()
     //printf("                                                      │\n");
     printf("└──────────────────────────────────────────────────────┘\n");
 }
-
-//  ─   │  ┌  ┐  └  ┘ 

@@ -5,12 +5,10 @@ extern stIpcMsg msg;
 
 bool checkDate(enum OP op, enum LN ln, enum P p)
 {
-  printf(" opcode: %d, led number: %d, parttern: %d\n", op, ln, p);
 	if ( op==OPCODE_LED)
 	{
     if((ln >= LN_1 && ln <= LN_5) && (p >= P_1 && p <= P_3))
     {
-      printf(" opcode: %d, led number: %d, parttern: %d\n", op, ln, p);
       return true;
     }
     else

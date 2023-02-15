@@ -7,13 +7,9 @@ bool checkDate(OP op, LN ln, P p);
 
 void send()
 {
-  printf("send start\n");
-
   data.key = ftok("progfile", 65);
   data.msgid = msgget(data.key, 0666 | IPC_CREAT);
-  printf("enum \n");
 
-  printf("%d %d %d", (OP)data.opcode, (LN)data.LedNum, (P)data.patter);
   bool result = checkDate((OP)data.opcode, (LN)data.LedNum, (P)data.patter);
   
   if(result==true) 

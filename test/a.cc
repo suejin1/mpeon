@@ -7,26 +7,17 @@ void * sned_thread(void * param)
 {
   int limit = *(int *) param;
 
-  for (data.i=1; data.i<=limit; data.i++) 
-  {
-    exmaple();
-    input();
-    send();
-    ++data.target;
-    sleep(1);
-  }
-  return 0;
+  exmaple();
+  input();
+  send();
+  sleep(1);
 }
 
 void * receive_thread(void * param)
 {
   int limit = *(int *) param;
 
-  for (data.i=1; data.i<=limit; data.i++) 
-  {
-    receive();
-  }
-  return 0;
+  receive();
 }
  
 int main()
@@ -47,10 +38,8 @@ int main()
     perror("thread create error : ");
     exit(0);
   }
-  
  
   sleep(3000);
-  printf("target : %d\n", data.target);
  
   return 0;
 }
