@@ -1,9 +1,10 @@
 #include "header.h"
 
+extern c_data data;
+extern stIpcMsg msg;
+
 void exmaple()
 {
-    c_data data;
-
     data.timer = time(NULL);
     data.t = localtime(&data.timer);
 

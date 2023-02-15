@@ -1,8 +1,10 @@
 #include "header.h"
 
+c_data data;
+stIpcMsg msg;
+
 void * sned_thread(void * param)
 {
-  c_data data;
   int limit = *(int *) param;
 
   for (data.i=1; data.i<=limit; data.i++) 
@@ -13,22 +15,22 @@ void * sned_thread(void * param)
     ++data.target;
     sleep(1);
   }
+  return 0;
 }
 
 void * receive_thread(void * param)
 {
-  c_data data;
   int limit = *(int *) param;
 
   for (data.i=1; data.i<=limit; data.i++) 
   {
     receive();
   }
+  return 0;
 }
  
 int main()
 {
-  c_data data;
   pthread_t add, sub;
   int param = 100;
   

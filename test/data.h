@@ -22,9 +22,7 @@ typedef enum P{  P_1=1, P_2, P_3 } p;
 typedef enum Time{  S, E } t;
 
 typedef struct {
-  public:
-  
-  int a, b, c, t1, t2;
+  int opcode, LedNum, patter, StartTime, EndTime;
   int run=1;
   int i=0, q=0;
   int target = 0;
@@ -36,3 +34,4 @@ typedef struct {
   time_t timer;
   struct tm* t;
 } c_data;
+//c_data랑 stIpcMsg 전역변수로 만들기

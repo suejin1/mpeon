@@ -1,10 +1,10 @@
 #include "header.h"
 
+extern c_data data;
+extern stIpcMsg msg;
+
 void receive()
 {
-    c_data data;
-    stIpcMsg msg;
-
     data.key = ftok("progfile", 65);
     data.msgid = msgget(data.key, 0666 | IPC_CREAT);
     
