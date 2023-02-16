@@ -21,8 +21,6 @@ void exmaple()
     printf("GPS :  3    0     StartTime  EndTime    Interval      │\n│");
     printf("     ( 3    0       free      free        free      ) │\n│");
     printf("                                                      │\n│");
-
     printf("띄어쓰기 없이 입력해주세요.                           │\n");
-    printf("│10초 내에 입력되지 않을 경우 종료됩니다.              │\n");
     printf("└──────────────────────────────────────────────────────┘\n");
 }
