@@ -35,7 +35,7 @@ int main()
     return -1;
   }
   
-  sleep(10);
+  pthread_join(add, NULL);
 
   int sub_id = pthread_create(&sub, NULL, receive_thread, &param);
   if (sub_id < 0)
@@ -43,6 +43,8 @@ int main()
     perror("thread create error : ");
     return -1;
   }
+
+  pthread_join(sub, NULL);
  
   sleep(3000);
 
