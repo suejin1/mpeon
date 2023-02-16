@@ -21,6 +21,9 @@ void exmaple()
     printf("GPS :  3    0     StartTime  EndTime    Interval      │\n│");
     printf("     ( 3    0       free      free        free      ) │\n│");
     printf("                                                      │\n│");
+    printf("StartTime : 입력한 만큼 대기 후 동작을 시작합니다.    │\n│");
+    printf("EndTime : 입력한 만큼 대기 후 동작을 종료합니다.      │\n│");
+    printf("Interval : 입력한 주기로 정보를 받아옵니다.           │\n│");
     printf("띄어쓰기 없이 입력해주세요.                           │\n");
     printf("└──────────────────────────────────────────────────────┘\n");
 }
