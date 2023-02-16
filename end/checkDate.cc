@@ -17,22 +17,19 @@ bool checkDate(enum OP op, enum LN ln, enum P p)
       return false;
     }
   }
-
   else if(op==OPCODE_TEMP)
   {
     printf(" TEMP Start \n");
     return true;
   }
-
   else if(op==OPCODE_GPS)
   {
     printf(" GPS Start \n");
     return true;
   }
-  
 	else 
   {
+    printf("error opcode: %d \n", op);
 		return false;
 	}
-
 }
