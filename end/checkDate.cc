@@ -1,8 +1,5 @@
 #include "header.h"
 
-extern c_data data;
-extern stIpcMsg msg;
-
 bool checkDate(enum OP op, enum LN ln, enum P p)
 {
 	if ( op==OPCODE_LED)

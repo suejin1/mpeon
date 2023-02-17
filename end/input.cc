@@ -1,13 +1,15 @@
 #include "header.h"
 
-extern c_data data;
-extern stIpcMsg msg;
-
 void input()
 {
     printf(" input : ");
-    scanf("%1d %1d %1d %1d %1d", &data.opcode, &data.LedNum, &data.StartTime, &data.EndTime, &data.patter);
-    printf(" wait %d \n", data.StartTime*1);
+    scanf("%1c %1c %1d %1d %1c", &data.opcode1, &data.LedNum1, &timer.StartTime, &timer.EndTime, &data.patter1);
 
-    sleep(data.StartTime*1);
+    data.opcode=data.opcode1 - '0';
+    data.LedNum=data.LedNum1 - '0';
+    data.patter=data.patter1 - '0';
+
+    printf(" wait %d \n", timer.StartTime*1);
+
+    sleep(timer.StartTime*1);
 }

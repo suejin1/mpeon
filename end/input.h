@@ -1,7 +1,7 @@
 #pragma once
 
 void exmaple();
-void send();
 void input();
+void send();
 void receive();
 bool checkDate();

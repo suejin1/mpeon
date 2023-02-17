@@ -2,6 +2,8 @@
 
 c_data data;
 stIpcMsg msg;
+stmq mq;
+sttime timer;
 
 void * sned_thread(void * param)
 {

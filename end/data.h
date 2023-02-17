@@ -1,7 +1,5 @@
 #pragma once
 
-#include "header.h"
-
 #define IPC_DATA_MAX_SIZE 10
 
 typedef struct {
@@ -22,13 +20,23 @@ typedef enum P{  P_1=1, P_2, P_3 } p;
 typedef enum Time{  S, E } t;
 
 typedef struct {
-  int opcode, LedNum, patter, StartTime, EndTime;
-  int run=1;
+  char opcode1, LedNum1, patter1;
+  int opcode, LedNum, patter;
+} c_data;
 
+typedef struct {
   key_t key;
   int msgid;
-  int id2;
+} stmq;
+
+typedef struct {
+  int StartTime, EndTime;
 
   time_t timer;
   struct tm* t;
-} c_data;
+} sttime;
+
+extern c_data data;
+extern stIpcMsg msg;
+extern stmq mq;
+extern sttime timer;

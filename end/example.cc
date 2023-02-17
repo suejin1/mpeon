@@ -1,16 +1,12 @@
 #include "header.h"
 
-extern c_data data;
-extern stIpcMsg msg;
-
 void exmaple()
 {
-    data.timer = time(NULL);
-    data.t = localtime(&data.timer);
+    timer.timer = time(NULL);
+    timer.t = localtime(&timer.timer);
 
     printf("┌──────────────────────────────────────────────────────┐\n│");
-    printf("현재 시간 : %d시 %d분 %d초                            │\n│", data.t->tm_hour, data.t->tm_min, data.t->tm_sec);
-
+    printf("현재 시간 : %d시 %d분 %d초                            │\n│", timer.t->tm_hour, timer.t->tm_min, timer.t->tm_sec);
     printf("모든 시간은 1초 단위입니다.                           │\n│");
     printf("LED :  1  LedNum  StartTime  EndTime     patter       │\n│");
     printf("     ( 1   1~5      free      free        1~3       ) │\n│");
