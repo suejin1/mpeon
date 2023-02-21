@@ -7,9 +7,9 @@ sttime timer;
 
 void sigint_handler( int signo) // 알람
 {
+  printf( "Interval : %d \n", data.z); // 몇 번 받았나 보려고 넣어둠
   data.z++;
   data.counter+=data.patter;
-  printf( "Interval : %d \n", data.z); // 몇 번 받았나 보려고 넣어둠
   alarm(data.patter);
 }
 
@@ -32,13 +32,12 @@ void * receive_thread(void * param) // 받는 스레드
     receive(); // 메시지 큐 받기
     if(data.opcode==2 || data.opcode==3) // 온도, GPS일 경우 Interval을 위해 만들어둠
     {
-      signal( SIGALRM, sigint_handler); // 알람 함수 호출
       alarm( data.patter );
+      data.counter+=data.patter;
       while( data.counter <= timer.EndTime ) // 끝나는 시간보다 카운터가 작으면 계속 동작
       {
-        ;
+        signal( SIGALRM, sigint_handler); // 알람 함수 호출
       }
-      break;
     }
     exit(1); // 강제 종료
   }
