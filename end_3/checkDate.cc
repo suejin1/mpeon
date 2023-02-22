@@ -16,13 +16,29 @@ bool checkDate(enum OP op, enum LN ln, enum P p) //데이터 유효성 검사 (?
   }
   else if(op==OPCODE_TEMP)
   {
-    printf(" TEMP Start \n");
-    return true;
+    if((ln>=1 && ln<=2))
+    {
+      printf(" TEMP Start \n");
+      return true;
+    }
+    else
+    {
+      printf("error opcode: %d, ?: %d\n", op, ln);
+      return false;
+    }
   }
   else if(op==OPCODE_GPS)
   {
-    printf(" GPS Start \n");
-    return true;
+    if((ln>=1 && ln<=2))
+    {
+      printf(" GPS Start \n");
+      return true;
+    }
+    else
+    {
+      printf("error opcode: %d, ?: %d\n", op, ln);
+      return false;
+    }
   }
 	else 
   {
