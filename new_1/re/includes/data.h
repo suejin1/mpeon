@@ -46,8 +46,8 @@ typedef struct {
 } stmq;
 
 typedef struct {
-  key_t key;
-  int msgid;
+  key_t key2;
+  int msgid2;
 } stmq2;
 
 typedef struct {
