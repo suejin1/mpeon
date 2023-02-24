@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/psj/psj_dotest/project/receiving_process/mq/checkDate.cc
+header.h
+/home/psj/psj_dotest/project/receiving_process/mq/header.h
+
 /home/psj/psj_dotest/project/receiving_process/mq/receive.cc
 header.h
 /home/psj/psj_dotest/project/receiving_process/mq/header.h
@@ -44,6 +48,8 @@ thread
 signal.h
 -
 fstream
+-
+sys/types.h
 -
 input.h
 includes/input.h

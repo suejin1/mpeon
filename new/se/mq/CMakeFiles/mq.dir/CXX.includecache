@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/psj/psj_dotest/project/sending_proeess/mq/receive.cc
+/home/psj/psj_dotest/project/sending_proeess/mq/send.cc
 header.h
 /home/psj/psj_dotest/project/sending_proeess/mq/header.h
 
@@ -42,6 +42,8 @@ cstdio
 thread
 -
 signal.h
+-
+sys/types.h
 -
 data.h
 includes/data.h
