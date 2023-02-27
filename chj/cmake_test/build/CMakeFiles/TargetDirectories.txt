@@ -1,6 +1,0 @@
-/workspaces/mpeon/chj/cmake_test/build/CMakeFiles/rebuild_cache.dir
-/workspaces/mpeon/chj/cmake_test/build/CMakeFiles/edit_cache.dir
-/workspaces/mpeon/chj/cmake_test/build/CMakeFiles/program.dir
-/workspaces/mpeon/chj/cmake_test/build/lib/CMakeFiles/rebuild_cache.dir
-/workspaces/mpeon/chj/cmake_test/build/lib/CMakeFiles/edit_cache.dir
-/workspaces/mpeon/chj/cmake_test/build/lib/CMakeFiles/shape.dir
