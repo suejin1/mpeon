@@ -18,7 +18,6 @@ void * sned_thread(void * param) // 보내는 스레드
   printf("sned_thread \n");
   int limit = *(int *) param;
 
-  mq.key = ftok("progfile1", 65); // 키 번호
   mq.msgid = msgget(SEND_MSGQ_KEY, 0666 | IPC_CREAT); // 메시지 큐 id
 
   exmaple(); // 입력 예시
@@ -33,7 +32,6 @@ void * receive_thread(void * param) // 받는 스레드
 {
   int limit = *(int *) param;
 
-  mq2.key = ftok("2", 64); // 키 번호
   mq2.msgid = msgget(RECV_MSGQ_KEY, 0666 | IPC_CREAT); // 메시지 큐 id
   
   while (1)
