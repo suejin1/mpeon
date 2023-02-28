@@ -5,8 +5,6 @@
 
 using namespace std;
 
-// extern int temp_sensor;
-
 enum TEMP_TYPE
 {
     TEMP_TYPE_0 = 0,

@@ -17,8 +17,6 @@
 #include <sys/types.h>
 #include "input.h"
 #include "data.h"
-#include "ledfunc.h"
-#include "ledpattern.h"
 #include "tempfunc.h"
 
 

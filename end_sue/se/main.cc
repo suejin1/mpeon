@@ -27,7 +27,6 @@ void * sned_thread(void * param) // 보내는 스레드
   return NULL;
 }
 
-
 void * receive_thread(void * param) // 받는 스레드
 {
   int limit = *(int *) param;
@@ -36,30 +35,30 @@ void * receive_thread(void * param) // 받는 스레드
   
   while (1)
   {
-      if(data.opcode==2 || data.opcode==3)
+    if(data.opcode==2 || data.opcode==3)
+    {
+      counter=1;
+      while (counter<=msg.E)
       {
-        counter=1;
-        while (counter<=msg.E)
-        {
-          msgrcv(mq2.msgid, &msg2, sizeof(msg2)-sizeof(long), 0, 0); // 메시지 큐 받기
-          printf(" TEMP : %d \n", msg2.Idata);
-          counter+=msg.P;
-        }
+        msgrcv(mq2.msgid, &msg2, sizeof(msg2)-sizeof(long), 0, 0); // 메시지 큐 받기
+        printf(" 온도 : %d \n", msg2.Idata);
+        counter+=msg.P;
       }
+    }
 
-      counter=0;
-      isreceive = (void*)true;
+    counter=0;
+    isreceive = (void*)true;
 
-      if(isreceive==true)
-      {
-        printf(" 잠시만 기다려주세요. \n");
-        sleep(msg.E);
-        memset(&data, 0, sizeof(c_data)); // 멤버 초기화
-        memset(&msg, 0, sizeof(stIpcMsg)); // 멤버 초기화
-        exmaple(); // 입력 예시
-        input(); // 실제 입력
-        send(); // 메시지 큐 보내기
-      }
+    if(isreceive==true)
+    {
+      printf(" 잠시만 기다려주세요. \n");
+      sleep(msg.E);
+      memset(&data, 0, sizeof(c_data)); // 멤버 초기화
+      memset(&msg, 0, sizeof(stIpcMsg)); // 멤버 초기화
+      exmaple(); // 입력 예시
+      input(); // 실제 입력
+      send(); // 메시지 큐 보내기
+    }
   }
   return NULL;
 }
@@ -86,7 +85,6 @@ int main()
   }
 
   pthread_join(sub, NULL); //받는 스레드 끝날 때까지 대기
-
 
   return 0;
 }
